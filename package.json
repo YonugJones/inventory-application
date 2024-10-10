@@ -1,0 +1,19 @@
+{
+  "name": "inventory-application",
+  "version": "1.0.0",
+  "description": "Inventory Application Project via The Odin Project",
+  "main": "index.js",
+  "devDependencies": {},
+  "scripts": {
+    "start": "node --watch index"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "dotenv": "^16.4.5",
+    "ejs": "^3.1.10",
+    "express": "^4.21.1",
+    "pg": "^8.13.0"
+  }
+}
