@@ -10,6 +10,19 @@ async function getRecords(req, res) {
   }
 };
 
+async function addRecord(req, res) {
+  try {
+    const { artist, album, genre, year, label } = req.body;
+    console.log(artist, album, genre, year, label);
+    await db.addRecordQuery(artist, album, genre, year, label);
+    res.redirect('/');
+  } catch (err) {
+    console.error('Error adding record to database:', err);
+    res.status()
+  }
+}
+
 module.exports = {
-  getRecords
+  getRecords,
+  addRecord
 }
