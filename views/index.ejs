@@ -5,9 +5,11 @@
   <title><%= title %></title>
 </head>
 <body>
-  <h1><%= title %></h1>
-  <a href="/new">Add Record</a>
-  <p>Sort by: artist album genre year label</p>
+  <header>
+    <h1><%= title %></h1>
+    <a href="/new">Add Record</a>
+    <p>Sort by: artist album genre year label random</p>
+  </header>
   <ul class="records-container">
     <% records.forEach(record => { %>
       <li class="record-container">
