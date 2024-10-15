@@ -6,9 +6,9 @@ async function getRecordsQuery() {
   return rows;
 };
 
-async function addRecordQuery(artist, title, genre, year, label) {
+async function addRecordQuery(artist, album, genre, year, label) {
   console.log('running queries addRecordQuery');
-  await pool.query('INSERT INTO records (artist, title, genre, year, label) VALUES ($1, $2, $3, $4, $5, $6, $7)' [artist, title, genre, year, label]);
+  await pool.query('INSERT INTO records (artist, album, genre, year, label) VALUES ($1, $2, $3, $4, $5)' [artist, album, genre, year, label]);
   console.log('Record inserted succesfully');
 };
 

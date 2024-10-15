@@ -5,7 +5,8 @@
   "main": "index.js",
   "devDependencies": {},
   "scripts": {
-    "start": "node --watch index"
+    "start": "node --watch index",
+    "populatedb": "node db/populatedb.js"
   },
   "keywords": [],
   "author": "",
