@@ -13,16 +13,27 @@ async function getRecords(req, res) {
 async function addRecord(req, res) {
   try {
     const { artist, album, genre, year, label } = req.body;
-    console.log(artist, album, genre, year, label);
     await db.addRecordQuery(artist, album, genre, year, label);
     res.redirect('/');
   } catch (err) {
     console.error('Error adding record to database:', err);
-    res.status()
+    res.status(500).send('Internal server error')
+  }
+};
+
+async function deleteRecord(req, res) {
+  try {
+    const { id } = req.body;
+    await db.deleteRecordQuery(id);
+    res.redirect('/');
+  } catch (err) {
+    console.err('Error deleting record from database:', err);
+    res.status(500).send('Internal server error')
   }
 }
 
 module.exports = {
   getRecords,
-  addRecord
+  addRecord,
+  deleteRecord
 }

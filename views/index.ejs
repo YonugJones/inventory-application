@@ -16,6 +16,11 @@
         <%= record.genre %> <br>
         <%= record.year %> <br>
         <%= record.label %> <br>
+        <form action="/delete" method="POST">
+          <input type="hidden" name="id" value="<%= record.id %>">
+          <button type="submit">DELETE</button>
+        </form>
+        <br>
       </li>
     <% }) %>
   </ul>

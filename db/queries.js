@@ -19,7 +19,7 @@ async function deleteRecordQuery(id) {
   console.log('running queries deleteRecordQuery');
   await pool.query('DELETE FROM records WHERE id = $1', [id]);
   console.log('Record deleted succesfully');
-}
+};
 
 module.exports = {
   getRecordsQuery,
