@@ -1,14 +1,20 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="/style.css">
   <title><%= title %></title>
 </head>
 <body>
   <header>
     <h1><%= title %></h1>
     <a href="/new">Add Record</a>
-    <p>Sort by: artist album genre year label random</p>
+    <p>Sort by:
+      <a href="/sort/artist">artist</a>
+      <a href="/sort/album">album</a>
+      <a href="/sort/genre">genre</a>
+      <a href="/sort/year">year</a>
+      <a href="/sort/label">label</a>
+    </p>
   </header>
   <ul class="records-container">
     <% records.forEach(record => { %>

@@ -21,8 +21,43 @@ async function deleteRecordQuery(id) {
   console.log('Record deleted succesfully');
 };
 
+async function sortByArtistQuery() {
+  console.log('running queries sortByArtistQuery');
+  const { rows } = await pool.query('SELECT * FROM records ORDER BY artist ASC');
+  return rows;
+};
+
+async function sortByAlbumQuery() {
+  console.log('running queries sortByAlbumQuery');
+  const { rows } = await pool.query('SELECT * FROM records ORDER BY album ASC');
+  return rows;
+};
+
+async function sortByGenreQuery() {
+  console.log('running queries sortByAlbumQuery');
+  const { rows } = await pool.query('SELECT * FROM records ORDER BY genre ASC');
+  return rows;
+};
+
+async function sortByYearQuery() {
+  console.log('running queries sortByYearQuery');
+  const { rows } = await pool.query('SELECT * FROM records ORDER BY year ASC');
+  return rows;
+};
+
+async function sortByLabelQuery() {
+  console.log('running queries sortByLabelQuery');
+  const { rows } = await pool.query('SELECT * FROM records ORDER BY label ASC');
+  return rows;
+};
+
 module.exports = {
   getRecordsQuery,
   addRecordQuery,
-  deleteRecordQuery
+  deleteRecordQuery,
+  sortByArtistQuery,
+  sortByAlbumQuery,
+  sortByGenreQuery,
+  sortByYearQuery,
+  sortByLabelQuery
 }
