@@ -6,7 +6,8 @@
   "devDependencies": {},
   "scripts": {
     "start": "node --watch index",
-    "populatedb": "node db/populatedb.js"
+    "populatedb": "node db/populatedb.js",
+    "postinstall": "npm run populatedb"
   },
   "keywords": [],
   "author": "",
