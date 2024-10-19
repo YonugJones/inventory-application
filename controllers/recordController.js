@@ -6,7 +6,7 @@ async function getRecords(req, res) {
     res.render('index', { title: 'Stax of Wax', records });
   } catch (err) {
     console.error('Error fetching data:', err);
-    res.status(500).send('trying to load data from a non existent db');
+    res.status(500).send(records);
     
   }
 };
