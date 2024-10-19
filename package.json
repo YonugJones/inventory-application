@@ -7,8 +7,7 @@
   "scripts": {
     "start": "node index.js", 
     "dev": "node --watch index.js",
-    "populatedb": "node db/populatedb.js",
-    "postinstall": "npm run populatedb"
+    "populatedb": "node db/populatedb.js"
   },
   "keywords": [],
   "author": "",
