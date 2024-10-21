@@ -4,6 +4,7 @@ require('dotenv').config();
 const { Client } = require("pg");
 
 const SQL = `
+DROP TABLE IF EXISTS records;
 CREATE TABLE IF NOT EXISTS records (
   id INTEGER PRIMARY KEY GENERATED ALWAYS AS IDENTITY,
   artist VARCHAR ( 255 ),
