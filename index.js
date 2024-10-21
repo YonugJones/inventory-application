@@ -17,7 +17,7 @@ app.use('/', indexRouter);
 app.use('/new', newRouter);
 app.use('/sort', sortRouter);
 
-const port = process.env.PORT || 3030;
+const port = process.env.PORT || 3000;
 app.listen(port, () => {
-  console.log(`Server running on http://localhost:${port}`);
+  console.log(`Server running on port ${port}`);
 });
