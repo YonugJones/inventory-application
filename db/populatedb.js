@@ -42,9 +42,7 @@ async function main() {
     console.log('Seeding...');
     const client = new Client({
       connectionString: process.env.DB_URL,
-      ssl: {
-        rejectUnauthorized: false
-      }
+      ssl: process.env.NODE_ENV === 'production' ? { rejectUnauthorized: false } : false
     });
     await client.connect();
     await client.query(SQL);
