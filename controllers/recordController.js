@@ -7,7 +7,6 @@ async function getRecords(req, res) {
   } catch (err) {
     console.error('Error fetching data:', err);
     res.status(500).send(records);
-    
   }
 };
 
