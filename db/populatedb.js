@@ -48,7 +48,7 @@ async function main() {
     await client.end();
     console.log('done');
   } catch(err) {
-    console.error('Error during seeding:', err)
+    console.error('Error during seedin:', err)
   }
 }
 
