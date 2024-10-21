@@ -4,7 +4,6 @@ require('dotenv').config();
 const { Client } = require("pg");
 
 const SQL = `
-DROP TABLE IF EXISTS records;
 CREATE TABLE IF NOT EXISTS records (
   id INTEGER PRIMARY KEY GENERATED ALWAYS AS IDENTITY,
   artist VARCHAR ( 255 ),
@@ -42,8 +41,7 @@ async function main() {
   try {
     console.log('Seeding...');
     const client = new Client({
-      connectionString: process.env.DB_URL,
-      ssl: process.env.NODE_ENV === 'production' ? { rejectUnauthorized: false } : false
+      connectionString: process.env.DB_URL
     });
     await client.connect();
     await client.query(SQL);
