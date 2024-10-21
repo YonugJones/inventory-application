@@ -6,7 +6,7 @@ async function getRecords(req, res) {
     res.render('index', { title: 'Stax of Wax', records });
   } catch (err) {
     console.error('Error fetching data:', err);
-    res.status(500).send(records);
+    res.status(500).send('can\'t get no records');
   }
 };
 
