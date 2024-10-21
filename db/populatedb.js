@@ -41,14 +41,14 @@ async function main() {
   try {
     console.log('Seeding...');
     const client = new Client({
-      connectionString: process.env.DB_URL
+      connectionString: process.env.DATABASE_URL
     });
     await client.connect();
     await client.query(SQL);
     await client.end();
     console.log('done');
   } catch(err) {
-    console.error('Error during seedin:', err)
+    console.error('Error during seeding:', err)
   }
 }
 
